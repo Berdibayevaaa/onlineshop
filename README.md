@@ -1,12 +1,8 @@
 Project Title and Topic: Aura Store - Multi-category Responsive Online Shop (Clothes, Gadgets, Cosmetics)
 link:https://berdibayevaaa.github.io/onlineshop/
-Group Member Names
-
-IT -2501 Berdibay Sayazhan 
-
-IT-2501 Abibulla Zarina 
-
-IT-2501 Zhumagul Nurassyl
+Group Member Names: IT -2501 Berdibay Sayazhan 
+                    IT-2501 Abibulla Zarina 
+                    IT-2501 Zhumagul Nurassyl
 
 Short Description of the Project
 Aura Store is a multi-page responsive web project designed as a modern e-commerce storefront. The platform combines three everyday lifestyle categories in one unified space: casual urban clothing, smart consumer gadgets, and skincare cosmetics. The primary goal of the project is to build an intuitive, visually clean user interface using semantic HTML5, custom CSS styling, and Bootstrap 5 utilities without relying on external JavaScript frameworks or backend databases. The website consists of 5 fully linked pages: Home (landing page with category previews), About (store background and mission), Products (showcase cards with badges and comparison table), Gallery (visual lookbook), and Contact (customer feedback form).
