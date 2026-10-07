@@ -1,5 +1,4 @@
-Project Title and Topic
-Aura Store - Multi-category Responsive Online Shop (Clothes, Gadgets, Cosmetics)
+Project Title and Topic: Aura Store - Multi-category Responsive Online Shop (Clothes, Gadgets, Cosmetics)
 
 Group Member Names
 
