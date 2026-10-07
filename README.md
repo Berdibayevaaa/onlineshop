@@ -1,11 +1,11 @@
-Project Title and Topic: Aura Store - Multi-category Responsive Online Shop (Clothes, Gadgets, Cosmetics)
+# Project Title and Topic: Aura Store - Multi-category Responsive Online Shop (Clothes, Gadgets, Cosmetics)
 
 
 link:https://berdibayevaaa.github.io/onlineshop/
 
   
  Group Member Names:
-* IT -2501 Berdibay Sayazhan
+* IT-2501 Berdibay Sayazhan
 * IT-2501 Abibulla Zarina
 * IT-2501 Zhumagul Nurassyl
 
