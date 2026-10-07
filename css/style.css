@@ -4,9 +4,6 @@
   --primary-color: #0d6efd;
   --dark-color: #212529;
   --light-bg: #f8f9fa;
-  --accent-color: #ff6b6b;
-  --base-font-size: 16px;
-  --section-padding: 3rem;
 }
 
 * {
@@ -17,8 +14,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--base-font-size);
-  color: var(--dark-color);
+  font-size: 16px;
+  color: #212529;
   background-color: #ffffff;
   padding-top: 70px;
   display: flex;
@@ -46,19 +43,19 @@ main {
   justify-content: space-between;
 }
 
-.nav-link {
-  color: var(--dark-color) !important;
+.custom-header .navbar-nav .nav-link {
+  color: #212529;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--primary-color) !important;
+.custom-header .navbar-nav .nav-link:hover,
+.custom-header .navbar-nav .nav-link:focus {
+  color: #0d6efd;
 }
 
 .btn-custom {
-  background-color: var(--primary-color);
+  background-color: #0d6efd;
   color: #ffffff;
   padding: 0.5rem 1.25rem;
   border-radius: 6px;
@@ -91,19 +88,20 @@ main {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: var(--accent-color);
+  background-color: #ff6b6b;
   color: #fff;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   border-radius: 4px;
 }
 
-.custom-table tbody tr:nth-child(even) {
-  --bs-table-bg: var(--light-bg);
+.custom-table tbody tr:nth-child(even) td {
+  background-color: #f8f9fa;
+  box-shadow: none;
 }
 
 footer {
-  background-color: var(--dark-color);
+  background-color: #212529;
   color: #ffffff;
   padding: 2rem 1rem;
   margin-top: auto;
@@ -121,10 +119,6 @@ footer a:focus {
 }
 
 @media (max-width: 991px) {
-  :root {
-    --section-padding: 2rem;
-  }
-
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -136,9 +130,9 @@ footer a:focus {
 }
 
 @media (max-width: 575px) {
-  :root {
-    --base-font-size: 14px;
-    --section-padding: 1.25rem;
+  body {
+    font-size: 14px;
+    padding-top: 60px;
   }
 
   .product-grid {
@@ -147,9 +141,5 @@ footer a:focus {
 
   h1 {
     font-size: 1.75rem;
-  }
-
-  body {
-    padding-top: 60px;
   }
 }
