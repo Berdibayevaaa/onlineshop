@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Store | Products</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Fixed Header with Bootstrap Toggler -->
+  <header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">
+        Aura<span class="text-primary">Store</span>
+      </a>
+
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <nav class="collapse navbar-collapse justify-content-end" id="mainNavbar" aria-label="Main navigation">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="products.html" aria-current="page">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Featured Products</h1>
+
+    <!-- CSS Grid with relative/absolute badge -->
+    <div class="product-grid">
+      <div class="card badge-card shadow-sm border-0">
+        <span class="badge-tag">Hot</span>
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=400" class="card-img-top" alt="Oversized T-Shirt" loading="lazy">
+        <div class="card-body">
+          <h2 class="h5">Cotton Oversized Tee</h2>
+          <p class="text-muted small">Category: Clothes</p>
+          <p class="fw-bold text-primary">$29.99</p>
+        </div>
+      </div>
+
+      <div class="card badge-card shadow-sm border-0">
+        <span class="badge-tag">Sale</span>
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" class="card-img-top" alt="Headphones" loading="lazy">
+        <div class="card-body">
+          <h2 class="h5">Noise-Cancelling Headphones</h2>
+          <p class="text-muted small">Category: Gadgets</p>
+          <p class="fw-bold text-primary">$89.99</p>
+        </div>
+      </div>
+
+      <div class="card badge-card shadow-sm border-0">
+        <span class="badge-tag">New</span>
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400" class="card-img-top" alt="Hydrating Serum" loading="lazy">
+        <div class="card-body">
+          <h2 class="h5">Hydrating Face Serum</h2>
+          <p class="text-muted small">Category: Cosmetics</p>
+          <p class="fw-bold text-primary">$19.50</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Required Table with :nth-child styling -->
+    <h2 class="mt-5 mb-3 text-center">Category Comparison & Warranty</h2>
+    <div class="table-responsive">
+      <table class="table custom-table table-bordered text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Category</th>
+            <th>Top Seller</th>
+            <th>Warranty</th>
+            <th>Return Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Clothes</td>
+            <td>Cotton Oversized Tee</td>
+            <td>30 Days Quality Guarantee</td>
+            <td>Free returns within 14 days</td>
+          </tr>
+          <tr>
+            <td>Gadgets</td>
+            <td>Wireless ANC Headphones</td>
+            <td>1 Year Official Warranty</td>
+            <td>Free returns within 14 days</td>
+          </tr>
+          <tr>
+            <td>Cosmetics</td>
+            <td>Hydrating Daily Serum</td>
+            <td>Sealed Freshness Guarantee</td>
+            <td>Exchange if damaged on delivery</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Aura Store. All rights reserved.</p>
+      <p class="small mb-2">Astana, Kazakhstan | <a href="mailto:info@aurastore.kz">info@aurastore.kz</a></p>
+      <nav aria-label="Social media">
+        <ul class="footer-social list-inline mb-0">
+          <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li class="list-inline-item"><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

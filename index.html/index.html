@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Store | Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Fixed Header with Bootstrap Toggler (Hamburg Menu on Mobile & Tablets) -->
+  <header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">
+        Aura<span class="text-primary">Store</span>
+      </a>
+
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <nav class="collapse navbar-collapse justify-content-end" id="mainNavbar" aria-label="Main navigation">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="index.html" aria-current="page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section using Bootstrap Utility Classes -->
+    <section class="bg-light py-5 text-center">
+      <div class="container py-4">
+        <h1 class="display-5 fw-bold mb-3">Style, Tech & Beauty in One Place</h1>
+        <p class="hero-copy lead text-muted mb-4 mx-auto">
+          Discover curated collections of modern streetwear, smart lifestyle gadgets, and organic cosmetics.
+        </p>
+        <a href="products.html" class="btn btn-custom">Explore Shop</a>
+      </div>
+    </section>
+
+    <!-- Categories Grid (Bootstrap Grid System: Stacking on mobile/tablet) -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4 fw-semibold">Shop By Category</h2>
+      <div class="row g-4">
+        <!-- Item 1: Clothes -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500" class="card-img-top" alt="Clothes" loading="lazy">
+            <div class="card-body text-center d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title fw-bold">Urban Clothes</h3>
+                <p class="card-text text-muted small">Casual, aesthetic, and durable apparel designed for daily comfort.</p>
+              </div>
+              <a href="products.html" class="btn btn-outline-primary btn-sm mt-3">View Clothes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Gadgets -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500" class="card-img-top" alt="Gadgets" loading="lazy">
+            <div class="card-body text-center d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title fw-bold">Smart Gadgets</h3>
+                <p class="card-text text-muted small">Noise-cancelling audio, wearable tech, and smart accessories.</p>
+              </div>
+              <a href="products.html" class="btn btn-outline-primary btn-sm mt-3">View Tech</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Cosmetics -->
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500" class="card-img-top" alt="Cosmetics" loading="lazy">
+            <div class="card-body text-center d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title fw-bold">Daily Cosmetics</h3>
+                <p class="card-text text-muted small">Gentle, hypoallergenic skincare and revitalizing serums.</p>
+              </div>
+              <a href="products.html" class="btn btn-outline-primary btn-sm mt-3">View Beauty</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Aura Store. All rights reserved.</p>
+      <p class="small mb-2">Astana, Kazakhstan | <a href="mailto:info@aurastore.kz">info@aurastore.kz</a></p>
+      <nav aria-label="Social media">
+        <ul class="footer-social list-inline mb-0">
+          <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li class="list-inline-item"><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Required Bootstrap 5 JS for Hamburger Toggle to work -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

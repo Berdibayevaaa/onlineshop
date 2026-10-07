@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #0d6efd;
+  --dark-color: #212529;
+  --light-bg: #f8f9fa;
+  --accent-color: #ff6b6b;
+  --base-font-size: 16px;
+  --section-padding: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--base-font-size);
+  color: var(--dark-color);
+  background-color: #ffffff;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.custom-header .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: var(--dark-color) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color) !important;
+}
+
+.btn-custom {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  opacity: 0.85;
+  color: #ffffff;
+}
+
+.hero-copy {
+  max-width: 650px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.badge-card {
+  position: relative;
+}
+
+.badge-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  --bs-table-bg: var(--light-bg);
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #cfe2ff;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --section-padding: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar-nav {
+    padding-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --base-font-size: 14px;
+    --section-padding: 1.25rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
