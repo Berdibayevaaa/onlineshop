@@ -1,4 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/poppins-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/poppins-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/poppins-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --primary-color: #0d6efd;
@@ -15,7 +37,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  color: #212529;
+  color: var(--dark-color);
   background-color: #ffffff;
   padding-top: 70px;
   display: flex;
@@ -44,29 +66,37 @@ main {
 }
 
 .custom-header .navbar-nav .nav-link {
-  color: #212529;
+  color: var(--dark-color);
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .custom-header .navbar-nav .nav-link:hover,
 .custom-header .navbar-nav .nav-link:focus {
-  color: #0d6efd;
+  color: var(--primary-color);
 }
 
 .btn-custom {
-  background-color: #0d6efd;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-color: #fff;
+  background-color: var(--primary-color);
   color: #ffffff;
   padding: 0.5rem 1.25rem;
   border-radius: 6px;
   border: none;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn-custom:hover,
-.btn-custom:focus {
-  opacity: 0.85;
+.btn-custom:focus,
+.btn-custom:active {
+  background-color: #0a58ca;
   color: #ffffff;
+}
+
+.btn-custom:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
 }
 
 .hero-copy {
@@ -101,7 +131,7 @@ main {
 }
 
 footer {
-  background-color: #212529;
+  background-color: var(--dark-color);
   color: #ffffff;
   padding: 2rem 1rem;
   margin-top: auto;
@@ -142,4 +172,99 @@ footer a:focus {
   h1 {
     font-size: 1.75rem;
   }
+}
+/* Keep catalogue photography and the no-photo state aligned. */
+.product-photo,
+.product-placeholder {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-placeholder {
+  display: grid;
+  place-items: center;
+  border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+  background: var(--light-bg);
+  color: var(--bs-secondary-color);
+}
+
+#productGrid:empty {
+  display: none;
+}
+
+.gallery-thumbnail {
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-thumbnail:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+body.gallery-open {
+  overflow: hidden;
+}
+
+.gallery-lightbox {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(15, 19, 24, 0.94);
+}
+
+.gallery-lightbox[open] {
+  display: grid;
+  place-items: center;
+}
+
+.gallery-lightbox::backdrop {
+  background: transparent;
+}
+
+.lightbox-content {
+  width: min(100%, 64rem);
+  display: grid;
+  gap: 0.75rem;
+}
+
+#closeImage {
+  justify-self: end;
+}
+
+#lightboxImage {
+  display: block;
+  width: 100%;
+  height: 68vh;
+  height: min(72dvh, max(8rem, calc(100dvh - 9rem)));
+  object-fit: contain;
+}
+
+.lightbox-navigation {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.lightbox-arrow {
+  font-size: 1.75rem;
+  line-height: 1;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
 }

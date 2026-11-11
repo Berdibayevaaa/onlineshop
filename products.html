@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Store | Products</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">
+        Aura<span class="text-primary">Store</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <nav class="collapse navbar-collapse justify-content-end" id="mainNavbar" aria-label="Main navigation">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="products.html" aria-current="page">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <h1 class="text-center mb-4">Featured Products</h1>
+
+    <div class="row align-items-end g-3">
+      <div class="col-md-5">
+        <label class="form-label" for="productSearch">Search products</label>
+        <input class="form-control" id="productSearch" type="search" placeholder="Search by name">
+      </div>
+      <div class="col-md-7">
+        <div class="d-flex gap-2 flex-wrap" id="categoryFilters" role="group" aria-label="Filter by category">
+          <button class="btn btn-outline-primary active" type="button" data-category="all" aria-pressed="true">All</button>
+          <button class="btn btn-outline-primary" type="button" data-category="clothes" aria-pressed="false">Clothes</button>
+          <button class="btn btn-outline-primary" type="button" data-category="gadgets" aria-pressed="false">Gadgets</button>
+          <button class="btn btn-outline-primary" type="button" data-category="cosmetics" aria-pressed="false">Cosmetics</button>
+        </div>
+      </div>
+    </div>
+    <p class="visually-hidden" id="productCount" role="status"></p>
+    <p class="alert alert-light border my-4" id="noProducts" hidden>No matching products. Try another name or category.</p>
+    <div class="product-grid" id="productGrid"></div>
+
+    <template id="productCard">
+      <article class="card badge-card shadow-sm border-0">
+        <span class="badge-tag"></span>
+        <div class="product-placeholder">No photo available</div>
+        <div class="card-body">
+          <h2 class="h5 text-break"></h2>
+          <p class="product-category text-muted small"></p>
+          <p class="product-price fw-bold text-primary mb-0"></p>
+        </div>
+      </article>
+    </template>
+
+    <section aria-labelledby="inventoryHeading">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <h2 id="inventoryHeading" class="mb-0">Product Inventory</h2>
+        <button type="button" class="btn btn-primary" id="addProduct">Add product</button>
+      </div>
+      <div class="table-responsive">
+        <table class="table custom-table table-bordered align-middle" aria-labelledby="inventoryHeading">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <template id="inventoryRow">
+      <tr>
+        <th scope="row" class="product-name text-break"></th>
+        <td class="product-category"></td>
+        <td class="product-price"></td>
+        <td>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-sm btn-outline-primary" data-action="edit">Edit</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-action="delete">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </template>
+
+    <h2 class="mt-5 mb-3 text-center">Category Comparison & Warranty</h2>
+    <div class="table-responsive">
+      <table class="table custom-table table-bordered text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Category</th>
+            <th>Top Seller</th>
+            <th>Warranty</th>
+            <th>Return Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Clothes</td>
+            <td>Cotton Oversized Tee</td>
+            <td>30 Days Quality Guarantee</td>
+            <td>Free returns within 14 days</td>
+          </tr>
+          <tr>
+            <td>Gadgets</td>
+            <td>Wireless ANC Headphones</td>
+            <td>1 Year Official Warranty</td>
+            <td>Free returns within 14 days</td>
+          </tr>
+          <tr>
+            <td>Cosmetics</td>
+            <td>Hydrating Daily Serum</td>
+            <td>Sealed Freshness Guarantee</td>
+            <td>Exchange if damaged on delivery</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <form class="modal-content" id="productForm" novalidate>
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="productModalTitle">Add product</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="productName" class="form-label">Product name</label>
+            <input id="productName" type="text" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="productCategory" class="form-label">Category</label>
+            <select id="productCategory" class="form-select" required>
+              <option value="">Choose a category</option>
+              <option value="clothes">Clothes</option>
+              <option value="gadgets">Gadgets</option>
+              <option value="cosmetics">Cosmetics</option>
+            </select>
+          </div>
+          <div>
+            <label for="productPrice" class="form-label">Price (USD)</label>
+            <input id="productPrice" type="number" class="form-control" min="0.01" step="0.01" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Aura Store. All rights reserved.</p>
+      <p class="small mb-2">Astana, Kazakhstan | <a href="mailto:info@aurastore.kz">info@aurastore.kz</a></p>
+      <nav aria-label="Social media">
+        <ul class="footer-social list-inline mb-0">
+          <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li class="list-inline-item"><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
