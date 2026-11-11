@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Store | Gallery</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">
+        Aura<span class="text-primary">Store</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <nav class="collapse navbar-collapse justify-content-end" id="mainNavbar" aria-label="Main navigation">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <h1 class="text-center mb-2">Lookbook & Showcase</h1>
+    <p class="text-center text-muted mb-4">A visual preview of our products in everyday life.</p>
+
+    <div class="product-grid">
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/autumn.jpg" class="img-fluid rounded" alt="Autumn collection" loading="lazy">
+      </button>
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/watch.jpg" class="img-fluid rounded" alt="Smart Watch" loading="lazy">
+      </button>
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/cleanser.jpg" class="img-fluid rounded" alt="Cleansing foam" loading="lazy">
+      </button>
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/outfit.jpg" class="img-fluid rounded" alt="Minimal outfit" loading="lazy">
+      </button>
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/audio.jpg" class="img-fluid rounded" alt="Over-ear headphones" loading="lazy">
+      </button>
+      <button type="button" class="gallery-thumbnail card border-0 shadow-sm" aria-haspopup="dialog">
+        <img src="assets/images/moisturizer.jpg" class="img-fluid rounded" alt="Moisturizer cream" loading="lazy">
+      </button>
+    </div>
+
+    <dialog class="gallery-lightbox" id="galleryLightbox" aria-label="Gallery image viewer">
+      <div class="lightbox-content">
+        <button type="button" id="closeImage" class="btn btn-outline-light" autofocus>Close</button>
+        <figure class="m-0">
+          <img id="lightboxImage" src="assets/images/autumn.jpg" alt="Autumn collection" loading="lazy">
+          <figcaption class="lightbox-navigation">
+            <button type="button" class="btn btn-outline-light lightbox-arrow" id="previousImage" aria-label="Previous image">‹</button>
+            <span id="lightboxCaption" aria-live="polite" aria-atomic="true"></span>
+            <button type="button" class="btn btn-outline-light lightbox-arrow" id="nextImage" aria-label="Next image">›</button>
+          </figcaption>
+        </figure>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Aura Store. All rights reserved.</p>
+      <p class="small mb-2">Astana, Kazakhstan | <a href="mailto:info@aurastore.kz">info@aurastore.kz</a></p>
+      <nav aria-label="Social media">
+        <ul class="footer-social list-inline mb-0">
+          <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li class="list-inline-item"><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

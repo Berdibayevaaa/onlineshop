@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Store | Contact</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar navbar-expand-lg custom-header">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 text-dark" href="index.html">
+        Aura<span class="text-primary">Store</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <nav class="collapse navbar-collapse justify-content-end" id="mainNavbar" aria-label="Main navigation">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4 justify-content-center">
+      <section class="col-md-9 col-lg-6" aria-labelledby="contact-heading">
+        <h1 id="contact-heading" class="h2 text-center mb-4">Get In Touch</h1>
+        <form id="contact-form" class="p-4 border rounded shadow-sm bg-white" aria-labelledby="contact-heading" novalidate>
+          <div class="mb-3">
+            <label for="userName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="userName" placeholder="Your Name" autocomplete="name" aria-describedby="userName-error" required>
+            <div class="invalid-feedback" id="userName-error"></div>
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="userEmail" placeholder="name@example.com" autocomplete="email" aria-describedby="userEmail-error" required>
+            <div class="invalid-feedback" id="userEmail-error"></div>
+          </div>
+          <div class="mb-3">
+            <label for="interest" class="form-label">Category of Inquiry</label>
+            <select class="form-select" id="interest">
+              <option value="clothes">Clothes & Sizing</option>
+              <option value="gadgets">Gadgets & Tech Support</option>
+              <option value="cosmetics">Cosmetics & Ingredients</option>
+              <option value="other">General Question</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="userMessage" class="form-label">Your Message</label>
+            <textarea class="form-control" id="userMessage" rows="4" placeholder="Write your inquiry..." aria-describedby="userMessage-error" required></textarea>
+            <div class="invalid-feedback" id="userMessage-error"></div>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Send Message</button>
+          <p id="contact-status" class="mb-0 text-success" role="status"></p>
+        </form>
+      </section>
+
+      <section class="col-md-9 col-lg-6" aria-labelledby="account-heading">
+        <h2 id="account-heading" class="text-center mb-4">Create an Account</h2>
+        <form id="account-form" class="p-4 border rounded shadow-sm bg-white" aria-labelledby="account-heading" novalidate>
+          <div class="mb-3">
+            <label for="account-name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="account-name" autocomplete="name" aria-describedby="account-name-error" required>
+            <div class="invalid-feedback" id="account-name-error"></div>
+          </div>
+          <div class="mb-3">
+            <label for="account-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="account-email" autocomplete="email" aria-describedby="account-email-error" required>
+            <div class="invalid-feedback" id="account-email-error"></div>
+          </div>
+          <div class="mb-3">
+            <label for="account-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="account-password" autocomplete="new-password" aria-describedby="password-help password-strength account-password-error" required>
+            <div class="invalid-feedback" id="account-password-error"></div>
+            <p class="form-text mb-0" id="password-help">Use at least 8 characters, including a letter and a digit. For a strong password, use 12 or more characters and include a symbol.</p>
+            <p class="small fw-semibold mb-0" id="password-strength" role="status"></p>
+          </div>
+          <div class="mb-3">
+            <label for="account-confirm" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="account-confirm" autocomplete="new-password" aria-describedby="account-confirm-error" required>
+            <div class="invalid-feedback" id="account-confirm-error"></div>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Create Account</button>
+          <p id="account-status" class="mb-0 text-success" role="status"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Aura Store. All rights reserved.</p>
+      <p class="small mb-2">Astana, Kazakhstan | <a href="mailto:info@aurastore.kz">info@aurastore.kz</a></p>
+      <nav aria-label="Social media">
+        <ul class="footer-social list-inline mb-0">
+          <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="list-inline-item"><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li class="list-inline-item"><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
