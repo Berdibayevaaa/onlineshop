@@ -7,9 +7,10 @@ Aura Store is the IT-2501 Endterm Project for WEB Technologies 1 (Front End). It
 
 ## Team members
 
+- IT-2501 Zhumagul Nurassyl
 - IT-2501 Berdibay Sayazhan
 - IT-2501 Abibulla Zarina
-- IT-2501 Zhumagul Nurassyl
+
 
 ## Project description
 
@@ -35,7 +36,7 @@ From the repository folder on Windows, run:
 | Team member | Evidence from the midterm history 
 | --- | --- 
 | IT-2501 Berdibay Sayazhan | Commits under Sayazhan added the original pages and stylesheet (5466703), then revised the layout and README. 
-| IT-2501 Abibulla Zarina | Revised the project description and features in the README (c0f180d). 
+| IT-2501 Abibulla Zarina | Revised the project description and features in the README (c0f180d) and co-developped with Sayazhan. 
 | IT-2501 Zhumagul Nurassyl | **Team to confirm.** Commit 55e48e3 records a README formatting change under the account name zhnuraa.  
 
 The commit history identifies the people who submitted changes. The team should confirm the division of work and replace the open entries before submission.
