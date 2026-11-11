@@ -1,4 +1,5 @@
 # Aura Store
+[Aura Store on GitHub Pages](https://berdibayevaaa.github.io/onlineshop/)
 
 ## Project title and topic
 
@@ -24,28 +25,20 @@ Home introduces the three collections and links to each category in the catalog.
 
 ## Technologies and local use
 
-The site uses semantic HTML5, CSS custom properties, Flexbox, CSS Grid, Bootstrap 5.3.0, JavaScript and full jQuery 3.7.1. All five HTML files are in the root. Author styles are in `css/style.css` and interactive features are in `js/script.js`. Bootstrap, jQuery, Poppins and the original Unsplash photos are served locally. No build step is required.
+The site uses semantic HTML5, CSS custom properties, Flexbox, CSS Grid, Bootstrap 5.3.0, JavaScript and full jQuery 3.7.1. All five HTML files are in the root. Author styles are in css/style.css and interactive features are in js/script.js. Bootstrap, jQuery, Poppins and the original Unsplash photos are served locally. No build step is required.
 
 From the repository folder on Windows, run:
 
-```powershell
-python -m http.server 8000 --bind 127.0.0.1
-```
-
-Open [Aura Store on localhost](http://localhost:8000/).
 
 ## Individual contributions
 
-| Team member | Evidence from the midterm history | Endterm contribution to confirm |
-| --- | --- | --- |
-| IT-2501 Berdibay Sayazhan | Commits under Sayazhan added the original pages and stylesheet (`5466703`), then revised the layout and README. | **Team to fill in** |
-| IT-2501 Abibulla Zarina | Revised the project description and features in the README (`c0f180d`). | **Team to fill in** |
-| IT-2501 Zhumagul Nurassyl | **Team to confirm.** Commit `55e48e3` records a README formatting change under the account name `zhnuraa`. | **Team to fill in** |
+| Team member | Evidence from the midterm history 
+| --- | --- 
+| IT-2501 Berdibay Sayazhan | Commits under Sayazhan added the original pages and stylesheet (5466703), then revised the layout and README. 
+| IT-2501 Abibulla Zarina | Revised the project description and features in the README (c0f180d). 
+| IT-2501 Zhumagul Nurassyl | **Team to confirm.** Commit 55e48e3 records a README formatting change under the account name zhnuraa.  
 
 The commit history identifies the people who submitted changes. The team should confirm the division of work and replace the open entries before submission.
 
-## Published site
 
-[Aura Store on GitHub Pages](https://berdibayevaaa.github.io/onlineshop/) · [Team repository on GitHub](https://github.com/Berdibayevaaa/onlineshop)
-
-The endterm version is prepared on the local `endterm` branch for team review. After merging and deploying, check the published Products, Gallery and Contact pages before submitting these two links.
+The endterm version is prepared on the local endterm branch for team review. After merging and deploying, check the published Products, Gallery and Contact pages before submitting these two links.
