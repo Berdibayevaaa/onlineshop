@@ -64,14 +64,15 @@ The site uses semantic HTML5, external CSS3 (Flexbox, CSS Grid, responsive media
 ## Screenshots
 
 ### Home Page & Light/Dark Theme
-![Dark Mode and Sign-in](assets/screenshot-theme.png)
+<img width="1899" height="1096" alt="image" src="https://github.com/user-attachments/assets/0e53f77b-accc-48a1-9a01-12d45bfd391a" />
+<img width="1884" height="1029" alt="image" src="https://github.com/user-attachments/assets/48b1f2b1-bf01-4643-9d00-812266cf0753" />
 
 ### FAQ Section (jQuery `.slideToggle()`)
-![FAQ Section](assets/screenshot-faq.png)
+<img width="1878" height="1022" alt="image" src="https://github.com/user-attachments/assets/e7c8218f-a9d0-4cef-9e30-141931c75fe5" />
 
 ### Dynamic Products from FakeStore API
-![API Products](assets/screenshot-api.png)
+<img width="1888" height="927" alt="image" src="https://github.com/user-attachments/assets/a3b9d7d9-d015-44d4-80a2-801dd451306b" />
 
 ## AI Usage Acknowledgment
 
-AI tools (Codex / Gemini) were used as supporting tools during project development for code generation, debugging, refactoring, and documentation structuring. All team members reviewed, tested, and understand the implemented code in accordance with the course AI Usage Policy.
+AI tools (GPT / Gemini) were used as supporting tools during project development for code generation, debugging, refactoring, and documentation structuring. All team members reviewed, tested, and understand the implemented code in accordance with the course AI Usage Policy.
