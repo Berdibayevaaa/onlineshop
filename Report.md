@@ -117,4 +117,4 @@ The navigation shows the saved display name and the **Sign Out** button.
 
 ## 8. AI usage acknowledgment
 
-Our team used GPT and Gemini for code generation, debugging, refactoring, and organizing the documentation. All three team members reviewed and tested the implementation in accordance with the course AI usage policy.
+Our team used GPT and Gemini for debugging, refactoring, and organizing the documentation. All three team members reviewed and tested the implementation in accordance with the course AI usage policy.
