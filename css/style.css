@@ -268,3 +268,20 @@ body.gallery-open {
   min-width: 2.75rem;
   min-height: 2.75rem;
 }
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode header, .dark-mode footer {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+.dark-mode header a, .dark-mode footer a {
+    color: #ffffff !important;
+}
+.dark-mode .card, .dark-mode .form-control {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+}
